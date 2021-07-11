@@ -1,0 +1,15 @@
+POST http://localhost:3000/foods
+Content-Type: application/json
+
+{
+    "foodname": "Burger 1",
+    "inventor": "AW YEAH"
+}
+
+###
+
+GET http://localhost:3000/people
+
+###
+
+PATCH HTTP://localhost:3000/people/3?email=juddmisaelbaguio@gmail.com
