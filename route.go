@@ -12,10 +12,6 @@ type IMuxRouter interface {
 	NewServer() *mux.Router
 }
 
-type Server struct {
-	*mux.Router
-}
-
 type router struct {}
 
 var (
@@ -25,10 +21,12 @@ var (
 
 func (router *router) NewServer() *mux.Router {
 	s := mux.NewRouter()
-	routes.People(s)
+	routes.People(s) // Registers a certain route (wrapped in function) from routes. Package
 	return s
-}
+} // -> MuxRouter().NewServer() 
 
+
+// Constructor setup to an Object
 func MuxRouter() IMuxRouter {
 	if m == nil {
 		routerOnce.Do(func() {

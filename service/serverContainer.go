@@ -22,7 +22,7 @@ func (k *kernel) InjectPeopleController() controllers.PeopleController {
 	return controllers.PeopleController{
 		DB: db,
 	}
-}
+} // ---> ServeService().InjectPeopleController() ; injecting the Controller for PeopleService
 
 var (
 	k *kernel

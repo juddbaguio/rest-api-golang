@@ -1,8 +1,6 @@
 package interfaces
 
-import "github.com/juddbaguio/rest-api-golang/models"
-
 type PeopleService interface {
-	GetPeople() []models.Person
-}
+	GetPeople()
+} // interfacing controllers from PeopleController to PeopleService
 

@@ -10,6 +10,7 @@ import (
 	"gorm.io/gorm"
 )
 
+// Connecting and initialization to database
 func initializeDB() *gorm.DB {
 	// load Env Variables
 	HOST := os.Getenv("HOST")
